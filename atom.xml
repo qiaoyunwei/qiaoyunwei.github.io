@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://qiaoyunwei.github.io/"/>
+  <updated>2016-12-13T07:21:31.677Z</updated>
+  <id>https://qiaoyunwei.github.io/</id>
+  
+  <author>
+    <name>乔昀威</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>postName</title>
+    <link href="https://qiaoyunwei.github.io/2016/12/13/postName/"/>
+    <id>https://qiaoyunwei.github.io/2016/12/13/postName/</id>
+    <published>2016-12-13T06:36:19.000Z</published>
+    <updated>2016-12-13T07:21:31.677Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一点： hexo d指令没反应 ，不生成错误信息，不上传github。<br>解决方案 站内配置文件：_config.yml 格式出错。少了一个空格<br>第二点 本地正常 github云端CSS显示出错。<br>解决方案：先执行hexo g生成静态文件，在执行hexo d上传。如果直接上传会导致CSS显示出错。<br>第三点 本地更改后上传github无效<br>解决方案： 先使用hexo clean 清除静态文件，再上传。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一点： hexo d指令没反应 ，不生成错误信息，不上传github。&lt;br&gt;解决方案 站内配置文件：_config.yml 格式出错。少了一个空格&lt;br&gt;第二点 本地正常 github云端CSS显示出错。&lt;br&gt;解决方案：先执行hexo g生成静态文件，在执行hexo 
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
