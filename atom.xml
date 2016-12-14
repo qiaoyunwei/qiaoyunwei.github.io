@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qiaoyunwei.github.io/"/>
-  <updated>2016-12-13T09:48:09.469Z</updated>
+  <updated>2016-12-14T04:48:54.002Z</updated>
   <id>https://qiaoyunwei.github.io/</id>
   
   <author>
@@ -16,11 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>resume</title>
+    <title>今天遇到一个骗子公司1</title>
+    <link href="https://qiaoyunwei.github.io/2016/12/14/new-1/"/>
+    <id>https://qiaoyunwei.github.io/2016/12/14/new-1/</id>
+    <published>2016-12-14T04:48:05.000Z</published>
+    <updated>2016-12-14T04:48:54.002Z</updated>
+    
+    <content type="html"><![CDATA[<p>多迪，打着招聘的名义实行培训。还好提前查了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;多迪，打着招聘的名义实行培训。还好提前查了&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>小结</title>
     <link href="https://qiaoyunwei.github.io/2016/12/13/resume/"/>
     <id>https://qiaoyunwei.github.io/2016/12/13/resume/</id>
     <published>2016-12-13T08:42:24.000Z</published>
-    <updated>2016-12-13T09:48:09.469Z</updated>
+    <updated>2016-12-14T04:43:57.598Z</updated>
     
     <content type="html"><![CDATA[<p>今天把简历弄完了并且部署在了自己的博客上，明天开始制作个人项目。先从JS开始吧。<br>制定一个规划，两个月内如果找不到工作开始学习后端PHP或者JAVA或者python.就这样</p>
 ]]></content>
@@ -36,11 +56,11 @@
   </entry>
   
   <entry>
-    <title>postName</title>
+    <title>部署踩过的坑</title>
     <link href="https://qiaoyunwei.github.io/2016/12/13/postName/"/>
     <id>https://qiaoyunwei.github.io/2016/12/13/postName/</id>
     <published>2016-12-13T06:36:19.000Z</published>
-    <updated>2016-12-13T07:21:31.677Z</updated>
+    <updated>2016-12-14T04:44:13.819Z</updated>
     
     <content type="html"><![CDATA[<p>第一点： hexo d指令没反应 ，不生成错误信息，不上传github。<br>解决方案 站内配置文件：_config.yml 格式出错。少了一个空格<br>第二点 本地正常 github云端CSS显示出错。<br>解决方案：先执行hexo g生成静态文件，在执行hexo d上传。如果直接上传会导致CSS显示出错。<br>第三点 本地更改后上传github无效<br>解决方案： 先使用hexo clean 清除静态文件，再上传。</p>
 ]]></content>
