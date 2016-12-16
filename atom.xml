@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qiaoyunwei.github.io/"/>
-  <updated>2016-12-16T10:32:40.242Z</updated>
+  <updated>2016-12-14T04:43:57.598Z</updated>
   <id>https://qiaoyunwei.github.io/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>学习日记</title>
-    <link href="https://qiaoyunwei.github.io/2016/12/16/new/"/>
-    <id>https://qiaoyunwei.github.io/2016/12/16/new/</id>
-    <published>2016-12-16T10:24:21.000Z</published>
-    <updated>2016-12-16T10:32:40.242Z</updated>
-    
-    <content type="html"><![CDATA[<p>2016/12/16<br>更改计划，开始学习算法跟Python<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中                     ？/？<br>明日计划：买书：《编码》 《flash web开发》  《计算机程序的构造和解释》<br>          公开课（0/2）    python日常<br>          如果还有时学着做几个JS Demo？<br>                                                   18:32</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;2016/12/16&lt;br&gt;更改计划，开始学习算法跟Python&lt;br&gt;今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1&lt;br&gt;          廖雪峰python教程进行中                     ？/？&lt;br&gt;明日计划：买书：《编码》 《
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>小结</title>
@@ -48,25 +29,6 @@
     
       &lt;p&gt;今天把简历弄完了并且部署在了自己的博客上，明天开始制作个人项目。先从JS开始吧。&lt;br&gt;制定一个规划，两个月内如果找不到工作开始学习后端PHP或者JAVA或者python.就这样&lt;/p&gt;
 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>部署踩过的坑</title>
-    <link href="https://qiaoyunwei.github.io/2016/12/13/postName/"/>
-    <id>https://qiaoyunwei.github.io/2016/12/13/postName/</id>
-    <published>2016-12-13T06:36:19.000Z</published>
-    <updated>2016-12-14T04:44:13.819Z</updated>
-    
-    <content type="html"><![CDATA[<p>第一点： hexo d指令没反应 ，不生成错误信息，不上传github。<br>解决方案 站内配置文件：_config.yml 格式出错。少了一个空格<br>第二点 本地正常 github云端CSS显示出错。<br>解决方案：先执行hexo g生成静态文件，在执行hexo d上传。如果直接上传会导致CSS显示出错。<br>第三点 本地更改后上传github无效<br>解决方案： 先使用hexo clean 清除静态文件，再上传。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;第一点： hexo d指令没反应 ，不生成错误信息，不上传github。&lt;br&gt;解决方案 站内配置文件：_config.yml 格式出错。少了一个空格&lt;br&gt;第二点 本地正常 github云端CSS显示出错。&lt;br&gt;解决方案：先执行hexo g生成静态文件，在执行hexo 
     
     </summary>
     
