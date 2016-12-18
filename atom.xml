@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qiaoyunwei.github.io/"/>
-  <updated>2016-12-16T10:47:12.438Z</updated>
+  <updated>2016-12-17T05:25:02.935Z</updated>
   <id>https://qiaoyunwei.github.io/</id>
   
   <author>
@@ -16,13 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>课堂笔记</title>
+    <link href="https://qiaoyunwei.github.io/2016/12/17/x-x/"/>
+    <id>https://qiaoyunwei.github.io/2016/12/17/x-x/</id>
+    <published>2016-12-17T05:22:58.000Z</published>
+    <updated>2016-12-17T05:25:02.935Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何计算X的平方根<br>G   G*G跟X比较  X/G  （G+x/G）/2=G</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何计算X的平方根&lt;br&gt;G   G*G跟X比较  X/G  （G+x/G）/2=G&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>学习日记</title>
     <link href="https://qiaoyunwei.github.io/2016/12/16/new/"/>
     <id>https://qiaoyunwei.github.io/2016/12/16/new/</id>
     <published>2016-12-16T10:24:21.000Z</published>
-    <updated>2016-12-16T10:47:12.438Z</updated>
+    <updated>2016-12-18T01:49:54.274Z</updated>
     
-    <content type="html"><![CDATA[<p>2016/12/16<br>更改计划，开始学习算法跟Python<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中                     ？/？<br>明日计划：买书：《编码》 《flash web开发》  《计算机程序的构造和解释》<br>          公开课（0/2）    python日常<br>          如果还有时学着做几个JS Demo？<br>                                                   18:32</p>
+    <content type="html"><![CDATA[<p>2016/12/16<br>更改计划，开始学习算法跟Python<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中                     ？/？<br>明日计划：买书：《编码》 《flask web开发》  《计算机程序的构造和解释》<br>          公开课（0/2）    python日常<br>          如果还有时学着做几个JS Demo？<br>                                                   18:32<br>2016/12/18<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中<br>          发现一个编程小游戏codecombat<br>          买书实际获得：《编程方法》《flash cc大全》《java 程序设计完全学习手册》 计算机程序的构造和解释》<br>今日任务：买书：《编码》 《flask web开发》《python 基础编程》<br>          麻省理工学院公开课：计算机科学及编程导论  0/1<br>          廖雪峰python教程    11/100<br>          尝试阅读《编程方法》</p>
 ]]></content>
     
     <summary type="html">
