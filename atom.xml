@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qiaoyunwei.github.io/"/>
-  <updated>2016-12-17T05:25:02.935Z</updated>
+  <updated>2016-12-26T03:09:45.133Z</updated>
   <id>https://qiaoyunwei.github.io/</id>
   
   <author>
@@ -16,19 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>取消A标签默认行为得几种方法</title>
+    <link href="https://qiaoyunwei.github.io/2016/12/26/fangda/"/>
+    <id>https://qiaoyunwei.github.io/2016/12/26/fangda/</id>
+    <published>2016-12-26T03:03:57.000Z</published>
+    <updated>2016-12-26T03:09:45.133Z</updated>
+    
+    <content type="html"><![CDATA[<p>(1)   <a href="javascript:void(0);" onclick="myjs( )" target="_blank" rel="external">  Click Me  </a><br>onclick方法负责执行js函数，而void是一个操作符，void(0)返回undefined，地址不发生跳转。<br><a href="javascript:;" target="_blank" rel="external">  Click Me  </a></p>
+<p>和void(0)一样，都返回”undefined”</p>
+<p>(2) <a href="#">  Click Me   </a></p>
+<p>是网上很常见的代码，#是标签内置的一个方法，用这种方法点击后网页后返回到页面的最顶端所以又有了“##”“#!”等,尽管解决了返回顶部的问题但仍存在其他缺陷</p>
+<p>(3)事件处理函数的工作机制中，在给某元素添加事件处理函数后，一旦事件发生，相应JavaScript代码就会执行，所调用的JavaScript代码的返回值被传递给事件处理函数。当我们给a标签添加onclick事件处理函数并点击a触发其后，<br>如果相应JavaScript代码返回true，onclick事件处理函数就会认为这个链接呗点击了，同样的若返回false即会认为链接<br>未被点击<br><a href="http://www.baidu.com" onclick=" myjs(); return false; " target="_blank" rel="external">   Click Me   </a><br><a href="http://www.baidu.com" onclick=" return false; " target="_blank" rel="external">  Click Me  </a></p>
+<p>当点击a标签时，JavaScript代码返回值为false，故此链接默认行为未被触发。</p>
+<p>(4)preventDefault()阻止事件的默认行为但不支持IE，所以在IE中使用returnValue阻止事件默认行为<br><a href="http://www.baidu.com" id="test" target="_blank" rel="external">  Click Me  </a> </p>
+<script type="text/javascript"> 
+var test = document.getElementById('test'); 
+function stopDefault( e )
+{ 
+   if ( e && e.preventDefault ) 
+      e.preventDefault(); 
+     else 
+        window.event.returnValue = false;  
+} 
+test.onclick = function(e) 
+{ 
+     stopDefault(e); 
+} 
+</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;(1)   &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;myjs( )&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;  Click Me  &lt;/a&gt;&lt;br&gt;onclick方法负责执行js函数，而void是一个操作符，vo
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>课堂笔记</title>
     <link href="https://qiaoyunwei.github.io/2016/12/17/x-x/"/>
     <id>https://qiaoyunwei.github.io/2016/12/17/x-x/</id>
     <published>2016-12-17T05:22:58.000Z</published>
-    <updated>2016-12-17T05:25:02.935Z</updated>
+    <updated>2016-12-26T03:15:00.119Z</updated>
     
     <content type="html"><![CDATA[<p>如何计算X的平方根<br>G   G*G跟X比较  X/G  （G+x/G）/2=G</p>
+<p>JS中把点击事件平稳退化到外部文件得方法<br>window.onload = prepareLinks;<br>funtion prepareLinks(){<br>  var links = document.getElementsByTagName(“a”);<br>  for (var i=0;i&lt;links.length;i++{<br>    is(links[i].inclick = function(){<br>      links[i].onclick = funtion(){<br>        popUp(this.getAttribute(“href”));<br>         return false;<br>         }<br>      }<br>    }<br>}</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;如何计算X的平方根&lt;br&gt;G   G*G跟X比较  X/G  （G+x/G）/2=G&lt;/p&gt;
-
+&lt;p&gt;JS中把点击事件平稳退化到外部文件得方法&lt;br&gt;window.onload = prepareLinks;&lt;br&gt;funtion prepareLinks(){&lt;br&gt;  v
     
     </summary>
     
@@ -40,9 +79,9 @@
     <link href="https://qiaoyunwei.github.io/2016/12/16/new/"/>
     <id>https://qiaoyunwei.github.io/2016/12/16/new/</id>
     <published>2016-12-16T10:24:21.000Z</published>
-    <updated>2016-12-20T10:22:38.175Z</updated>
+    <updated>2016-12-26T03:05:56.149Z</updated>
     
-    <content type="html"><![CDATA[<p>2016/12/16<br>更改计划，开始学习算法跟Python<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中                     ？/？<br>明日计划：买书：《编码》 《flask web开发》  《计算机程序的构造和解释》<br>          公开课（0/2）    python日常<br>          如果还有时学着做几个JS Demo？<br>                                                   18:32<br>2016/12/18<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   0/1<br>          廖雪峰python教程进行中<br>          发现一个编程小游戏codecombat<br>          买书实际获得：《编程方法》《flash cc大全》《java 程序设计完全学习手册》 计算机程序的构造和解释》<br>今日任务：买书：《编码》 《flask web开发》《python 基础编程》<br>          麻省理工学院公开课：计算机科学及编程导论  0/1<br>          廖雪峰python教程    11/100<br>          尝试阅读《编程方法》<br>2016/12/19<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python暂停<br>          书已发货<br>          《编程方法》==垃圾<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   0/1<br>          回顾JS代码<br>          学习DOM中<br>2016/12/20<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论    1/1<br>          慕课网DOM课程<br>今日任务：阅读《编码》<br>          阅读《javaScirpt高级程序设计》</p>
+    <content type="html"><![CDATA[<p>2016/12/16<br>更改计划，开始学习算法跟Python<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python教程进行中                     ？/？<br>明日计划：买书：《编码》 《flask web开发》  《计算机程序的构造和解释》<br>          公开课（0/2）    python日常<br>          如果还有时学着做几个JS Demo？<br>                                                   18:32<br>2016/12/18<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   0/1<br>          廖雪峰python教程进行中<br>          发现一个编程小游戏codecombat<br>          买书实际获得：《编程方法》《flash cc大全》《java 程序设计完全学习手册》 计算机程序的构造和解释》<br>今日任务：买书：《编码》 《flask web开发》《python 基础编程》<br>          麻省理工学院公开课：计算机科学及编程导论  0/1<br>          廖雪峰python教程    11/100<br>          尝试阅读《编程方法》<br>2016/12/19<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   1/1<br>          廖雪峰python暂停<br>          书已发货<br>          《编程方法》==垃圾<br>今日任务：麻省理工学院公开课：计算机科学及编程导论   0/1<br>          回顾JS代码<br>          学习DOM中<br>2016/12/20<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论    1/1<br>          慕课网DOM课程<br>今日任务：阅读《编码》<br>          阅读《javaScirpt高级程序设计》<br>2016/12/21<br>昨日完成：麻省理工学院公开课：计算机科学及编程导论   0/1<br>          《编码》试阅读，闲时读物，经典之作。<br>          学习《javaScirpt高级程序设计》     37/749<br>今日任务：麻省理工学院公开课：计算机科学及编程导论<br>         《javaScirpt高级程序设计》<br>2016/12/23<br>昨日完成： 昨天去应聘，一个前端开发岗位，他们已经不玩培训金骗局了，是所谓的担保金。<br>今日任务：学习《javaScirpt高级程序设计》      80/749<br>          去应聘都会问项目的事，再考虑什么时候开始做项目。<br>2016/12/26<br>之前完成：《javaScirptDom编程艺术》  70/300<br>            做了一个图片库小项目</p>
 ]]></content>
     
     <summary type="html">
