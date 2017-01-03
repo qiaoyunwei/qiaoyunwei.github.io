@@ -490,7 +490,11 @@ test.onclick = function(e)
         
           
             <p>如何计算X的平方根<br>G   G*G跟X比较  X/G  （G+x/G）/2=G</p>
-<p>JS中把点击事件平稳退化到外部文件得方法<br>window.onload = prepareLinks;<br>funtion prepareLinks(){<br>  var links = document.getElementsByTagName(“a”);<br>  for (var i=0;i&lt;links.length;i++{<br>    is(links[i].inclick = function(){<br>      links[i].onclick = funtion(){<br>        popUp(this.getAttribute(“href”));<br>         return false;<br>         }<br>      }<br>    }<br>}</p>
+<p>JS中把点击事件平稳退化到外部文件得方法<br>window.onload = prepareLinks;<br>if(!document.getElementsByTagName) return false;<br>funtion prepareLinks(){<br>  var links = document.getElementsByTagName(“a”);<br>  for (var i=0;i&lt;links.length;i++{<br>    is(links[i].inclick = function(){<br>      links[i].onclick = funtion(){<br>        popUp(this.getAttribute(“href”));<br>         return false;<br>         }<br>      }<br>    }<br>}<br>function popUp(winURL){<br>  window.open(winURL,”popUp”,”windth=320,height=480”);<br>  }</p>
+<p>  DOM中把一个节点插到另一个节点之后得方法<br>  function insertAfter(newElement,targetElement){<br>  var parent = targetElement.parentNOde;<br>  if (parent.lastChild == targetElement){<br>       parent.appendChild(newElement);<br>     }else{<br>       parent.insertBefore(newElement,targetElement.enxtSibling);<br>     }<br>}</p>
+<p>封装事件监听程序<br>function addEvent(ele,type,hander){<br>            if(ele.addEvenListener){<br>                ele.addEvenListener(type,hander,false);<br>            }else if(ele.addachEvent){<br>                ele.addachEvent(“on”+type,hander);<br>            }else{<br>                ele[“on”+type]=hander;<br>            }</p>
+<p>阻止事件冒泡<br>function(event){<br>                event = event ||window.event;<br>                // 执行脚本<br>                if(event.stopPropagation){<br>                    event.stopPropagation();<br>                }else{<br>                    event.cancelBubble=true;<br>                }<br>                list.style.display=’block’;<br>            }</p>
+<p>获取样式<br>function getStyle(obk,attr){<br>    if(obj.currentStyle){<br>    return boj.currentStyle[attr];<br>    }else{<br>    return getComputedStyle(obj,false)[attr];<br>    }<br>}</p>
 
           
         
@@ -1011,8 +1015,8 @@ test.onclick = function(e)
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
