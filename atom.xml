@@ -58,7 +58,7 @@ test.onclick = function(e)
     <link href="https://qiaoyunwei.github.io/2016/12/17/x-x/"/>
     <id>https://qiaoyunwei.github.io/2016/12/17/x-x/</id>
     <published>2016-12-17T05:22:58.000Z</published>
-    <updated>2017-01-03T04:30:25.862Z</updated>
+    <updated>2017-01-05T05:12:49.506Z</updated>
     
     <content type="html"><![CDATA[<p>如何计算X的平方根<br>G   G*G跟X比较  X/G  （G+x/G）/2=G</p>
 <p>JS中把点击事件平稳退化到外部文件得方法<br>window.onload = prepareLinks;<br>if(!document.getElementsByTagName) return false;<br>funtion prepareLinks(){<br>  var links = document.getElementsByTagName(“a”);<br>  for (var i=0;i&lt;links.length;i++{<br>    is(links[i].inclick = function(){<br>      links[i].onclick = funtion(){<br>        popUp(this.getAttribute(“href”));<br>         return false;<br>         }<br>      }<br>    }<br>}<br>function popUp(winURL){<br>  window.open(winURL,”popUp”,”windth=320,height=480”);<br>  }</p>
@@ -66,6 +66,10 @@ test.onclick = function(e)
 <p>封装事件监听程序<br>function addEvent(ele,type,hander){<br>            if(ele.addEvenListener){<br>                ele.addEvenListener(type,hander,false);<br>            }else if(ele.addachEvent){<br>                ele.addachEvent(“on”+type,hander);<br>            }else{<br>                ele[“on”+type]=hander;<br>            }</p>
 <p>阻止事件冒泡<br>function(event){<br>                event = event ||window.event;<br>                // 执行脚本<br>                if(event.stopPropagation){<br>                    event.stopPropagation();<br>                }else{<br>                    event.cancelBubble=true;<br>                }<br>                list.style.display=’block’;<br>            }</p>
 <p>获取样式<br>function getStyle(obk,attr){<br>    if(obj.currentStyle){<br>    return boj.currentStyle[attr];<br>    }else{<br>    return getComputedStyle(obj,false)[attr];<br>    }<br>}</p>
+<p>改变任意属性函数<br>function startMove(obj,attr,iTarget){<br>    clearInterval(obj.timer);<br>    obj.timer = setInterval(function){<br>        var icur = parseInt(getStyle(obj,attr));<br>        var speed = (iTarget-icur)/8;<br>        speed = speed&gt;0?Math.ceil(speed):Math.floor(speed);<br>        if(icur == iTarget){<br>            clearInterval(obj.timer);<br>        }else{<br>            obj.style[attr] = icur + speed +’px’;<br>        }<br>    },30)<br>}</p>
+<p>JS常见运动完美运动框架。<br>function startMove(obj, json, fn) {<br>    clearInterval(obj.timer);<br>    obj.timer = setInterval(function() {<br>        var flag = true;//标志所有运动是否到达目标值—–必须放在计时器里面(才能满足判断所有运动是否到达目标值)<br>        for(var attr in json) {<br>            var curr = 0;<br>            if(attr == ‘opacity’) {<br>                curr = Math.round(parseFloat(getStyle(obj, attr)) * 100);<br>            } else {<br>                curr = parseInt(getStyle(obj, attr));<br>            }<br>            //移动速度处理<br>            var speed = 0;<br>            speed = (json[attr] - curr) / 10;<br>            speed = speed &gt; 0 ? Math.ceil(speed) : Math.floor(speed);<br>            if(curr != json[attr]) {<br>                flag = false;<br>            }<br>            if(attr == ‘opacity’) {<br>                obj.style.filter = ‘alpha(opacity:’ + (curr + speed) + “)”;<br>                obj.style.opacity = (curr + speed) / 100;<br>            } else {<br>                obj.style[attr] = curr + speed + ‘px’;<br>            }<br>        }<br>        if(flag) {<br>            //alert(‘ok’);<br>            clearInterval(obj.timer);<br>            if(fn) {<br>                fu();<br>            }<br>        }<br>    }, 30);<br>}</p>
+<p>function getStyle(obj, attr) {<br>    if(obj.currentStyle) { //IE取样式<br>        return obj.currentStyle[attr];<br>    } else {<br>        return getComputedStyle(obj, false)[attr];<br>    }</p>
+<p>}</p>
 ]]></content>
     
     <summary type="html">
